@@ -7,17 +7,22 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 
+# for heroku
+#group :production do
+#  gem 'pg', '~> 0.14'
+#end
+gem 'yaml_db'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
-
-  gem 'compass', '~> 0.12.2'
+#  gem 'bootstrap-sass', '~> 2.3.0'
+  gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.2.0'
   gem 'uglifier', '>= 1.0.3'
 end
@@ -50,8 +55,6 @@ group :development, :test do
   gem 'annotate', '~> 2.5.0'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'capybara'
-#  gem 'jasmine'
   gem 'rspec-rails',  '~> 2.12.0'
   gem 'spork'
   gem 'rails_best_practices', '~> 1.13.4'
@@ -63,7 +66,7 @@ group :test do
   gem 'database_cleaner', '~> 0.9.1'
 #  gem 'capybara-webit'
   gem 'launchy'
-  gem 'jasmine'
+  gem 'jasminerice', '~> 0.0.10'
   gem 'machinist', '~> 2.0'
   gem 'guard-rspec'
   gem 'guard-cucumber', '~> 1.3.2'
