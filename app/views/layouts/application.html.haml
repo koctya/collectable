@@ -1,9 +1,16 @@
 !!!
 %html
   %head
-    %title Collectable
+    %title
+      = yield(:title) || "Collectables"
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    .row.twelve.columns
+      %nav.top-bar
+        %ul
+          %li.name
+            %h3 Collectables
+    .row        
+      = yield
