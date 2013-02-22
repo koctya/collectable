@@ -1,9 +1,24 @@
 !!!
 %html
   %head
-    %title Collectable
+    %title
+      = yield(:title) || "Collectables"
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    .row
+      .twelve.columns
+        .fixed
+        %nav.top-bar
+          %ul
+            %li.name
+              %h2= link_to 'Collectables', '#'
+            %li.toggle-topbar
+          %section
+            %ul.left
+    .row
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+    .row        
+      = yield
