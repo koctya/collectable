@@ -1,8 +1,8 @@
-.twelve.columns
+.row.twelve.columns
   %h1 Welcome#index
 
   = link_to "Users", users_path
-  
+  = link_to "New", new_users_path
   %ul
     - @users.each do |user|
-      %li user.name
+      %li= user.name
