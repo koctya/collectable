@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130222225250) do
+ActiveRecord::Schema.define(:version => 20130225041057) do
 
   create_table "collections", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(:version => 20130222225250) do
   end
 
   add_index "collections", ["user_id"], :name => "index_collections_on_user_id"
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "keywords"
+    t.string   "image"
+    t.integer  "collection_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "items", ["collection_id"], :name => "index_items_on_collection_id"
 
   create_table "users", :force => true do |t|
     t.string   "provider"
