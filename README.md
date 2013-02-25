@@ -1,40 +1,44 @@
 # Readme and notes for Test App
+> Note:  This Readme can be displayed in browser through link from welcome page.
 
-Collectables ->
-User - hasmany collections
+An app to track collections with images.
+I didn't have time to add the images using paperclip or similar tool, maybe when I get back.
 
-collection belongs to a user
+Basic models
 
-collection has many items
+    Collectables ->
+      User - hasmany collections
+        name, avatar image
 
-item belongs to collection
+      Collection has many items
+        name, desc
 
-User
-  name 
-  collections
+      Item belongs to collection
+      Items have;
+        name, description, image
+
+Items will be displayed using Foundation's Orbit slide-show widgit
+
+Sample data;  
+
+    Stasya
+    Wooden Trains
+      Thomas
+      James
+      Hiro
+      Lady
   
-Collection
-  name
-  type
-  items
+    Kurt
+      Computers
+        Cube
+        Next
+        O2
+        iMac
+        Mac II FX
   
-Item
-  name
-  summary
-  pic
-  description
-  
-Stasya
-Wooden Trains
-  Thomas
-  James
-  Hiro
-  Lady
-  
-Kurt
-  Computers
-    Cube
-    Next
-    O2
-    iMac
-    Mac II FX
+## Documentation
+
+Documentation actions on the welcome page to demonstrate routing, and also to prototype an idea I had to render markdown documents on a documentation page.
+currently it only displays thid README.md, but in future I want to add tables to hold the title, summmary, and the actual markdown, then display a list of documents, and render the markdown to the browser.
+
+It would also add an editor like Mercury or CK-editor to edit the markdown and save it to the database.

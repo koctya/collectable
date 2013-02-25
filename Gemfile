@@ -31,6 +31,7 @@ gem 'haml', '~> 4.0.0'
 gem 'jquery-rails', '2.2.1'
 gem 'jquery-ui-rails', '~> 4.0.1'
 gem 'haml-rails', '~> 0.4'
+gem 'kramdown', '~> 0.14.2'
 #gem 'omniauth-github'
 
 # To use ActiveModel has_secure_password
