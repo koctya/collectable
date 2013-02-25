@@ -4,6 +4,10 @@
 An app to track collections with images.
 I didn't have time to add the images using paperclip or similar tool, maybe when I get back.
 
+setup database; 
+
+    rake db:setup
+    
 Basic models
 
     Collectables ->

@@ -1,7 +1,9 @@
 Collectable::Application.routes.draw do
   get "welcome/index"
 
-  resource :users
+  resources :users do
+    resources :collections
+  end
   
   match "/documentation" => "welcome#documentation", :as => :documentation
   get "/docs/:id" => "welcome#show", :as => :show
