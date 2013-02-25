@@ -8,6 +8,7 @@ class CreateCollections < ActiveRecord::Migration
 
       t.timestamps
     end
+
     add_index :collections, :user_id
   end
 end

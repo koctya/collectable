@@ -1,0 +1,9 @@
+.row.twelve.columns
+  %h1 Users
+
+  = link_to "New", new_user_path
+  %ul
+    - @users.each do |user|
+      %li
+        = user.name 
+        = user.avatar

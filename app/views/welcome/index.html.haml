@@ -1,8 +1,15 @@
 .row.twelve.columns
-  %h1 Welcome#index
+  %h1 Welcome to Collections
 
   = link_to "Users", users_path
-  = link_to "New", new_users_path
-  %ul
-    - @users.each do |user|
-      %li= user.name
+  %hr
+  - @users.each do |user|
+    .row
+      .two.columns
+        = user.name
+      .ten.columns
+        - user.collection.each do |col|
+          .row
+            .two.columns= col.name
+            .six.columns= col.description
+    %hr

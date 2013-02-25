@@ -9,6 +9,10 @@ collection has many items
 
 item belongs to collection
 
+setup database; 
+
+    rake db:setup
+    
 User
   name 
   collections

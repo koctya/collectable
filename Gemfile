@@ -49,7 +49,8 @@ gem 'puma', '~> 1.6.3'
 # gem 'debugger'
 
 group :development, :test do
-  gem 'pry', '~> 0.9.12'
+#  gem 'pry', '~> 0.9.12'
+  gem 'pry-rails'
   gem 'pry-nav', '~> 0.2.3'
   gem 'awesome_print', '~> 1.1.0'
   gem 'annotate', '~> 2.5.0'
